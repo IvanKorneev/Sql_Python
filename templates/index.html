@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handlebars & SQL</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/jquery.min.js"></script>
+    <script src="../static/handlebars-v4.7.6.js"></script>
+
+</head>
+<body>
+    <h1>Handlebars & SQL</h1>
+
+    <textarea name="sql" id="sqlfield" cols="50" rows="15" style="font-size: 18px;"></textarea>
+    <img src="../static/img/large.jpeg" alt="SQL Cheat Sheet" width="600px">
+    <br>
+    <button id="submit">Submit</button>
+
+    {% raw %}
+    <script type="text/x-handlebars-template" id="itemTemplate">
+        {{#each employees}}
+        <div class="itemTemplateWrapper">
+            {{#eachProperty this}}
+                <div><span class='grey'><b>{{property}}:</b></span> <span>{{value}}</span></div><br/>
+            {{/eachProperty }}
+        </div>
+        {{/each}}
+    </script>
+    {% endraw %}
+    
+    <div id="container"></div>
+    <script src="../static/index.js"></script>
+</body>
+</html>

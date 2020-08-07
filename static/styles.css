@@ -1,0 +1,15 @@
+body {
+	font-size: 12pt;
+}
+
+.itemTemplateWrapper {
+	border: 1px solid gray;
+	padding: 2pt;
+	margin-top: 5px;
+	width: auto;
+	display: block;
+}
+
+.grey {
+	color: gray;
+}
